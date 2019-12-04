@@ -20,3 +20,8 @@
 .App-link {
   color: #09d3ac;
 }
+
+.Video-Frame {
+  min-height: 425px;
+  min-width: 375px;
+}

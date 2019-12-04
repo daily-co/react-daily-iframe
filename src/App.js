@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import VideoCallFrame from './VideoCallFrame';
 
 function App() {
   return (
@@ -18,6 +19,11 @@ function App() {
         >
           Learn React
         </a>
+
+        <VideoCallFrame
+          url={ process.env.REACT_APP_DAILY_ROOM_URL }
+        ></VideoCallFrame>
+
       </header>
     </div>
   );
