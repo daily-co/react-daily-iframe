@@ -17,6 +17,18 @@ class VideoCallFrame extends React.Component {
     this.daily.join({ url: this.props.url });
   }
 
+  async componentWillUnmount() {
+    let f = new Promise(async resolve => {
+      try {
+        await this.daily.destroy();
+      } catch (e) {
+        console.log ("Failed to destroy", e);
+      }
+      resolve ();
+    });
+    await f;
+  }
+
   render() {
     return <iframe className="Video-Frame"
              title="video call iframe"
